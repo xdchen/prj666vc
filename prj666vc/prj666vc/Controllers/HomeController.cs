@@ -15,16 +15,16 @@ namespace prj666vc.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult VirtualClass()
         {
-            ViewBag.Message = "Your app description page.";
+            ViewBag.Message = "Your vc description page.";
 
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult NotesSharing()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Your NS page.";
 
             return View();
         }

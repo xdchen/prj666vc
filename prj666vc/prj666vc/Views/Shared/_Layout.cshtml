@@ -12,24 +12,37 @@
         <header>
             <div class="content-wrapper">
                 <div class="float-left">
-                    <p class="site-title">@Html.ActionLink("your logo here", "Index", "Home")</p>
+                    <p class="site-title">@Html.ActionLink("GAB System V1.0", "Index", "Home")</p>
                 </div>
-                <div class="float-right">
+                <div class="float-left">
                     <section id="login">
                         @Html.Partial("_LoginPartial")
                     </section>
+                    <section id="search">
+                        <h3>Search for friends</h3>
+                        <input id="Text1" type="text" /> <input id="Submit1" type="submit" value="submit" />
+        
+                        
+                    </section>
                     <nav>
                         <ul id="menu">
-                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                            <li>@Html.ActionLink("About", "About", "Home")</li>
-                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                            
+                            <li>@Html.MenuLink("Virtual Class", "Index", "VirtualClass", "active", true)</li>
+                            <li>@Html.MenuLink("Notes Sharing", "NotesSharing", "Home", "active", true)</li>
+                            
+                            <li>@Html.MenuLink("Messaging", "Messaging", "Home", "active", true)</li>
+                            <li>@Html.MenuLink("Timetable Sharing", "TimetableSharing", "Home", "active", true)</li>
+                            <li>@Html.MenuLink("Notifications", "Notifications", "Home", "active", true)</li>
+                            <li>@Html.MenuLink("Used Books", "UsedBooks", "Home", "active", true)</li>
+                            <li>@Html.MenuLink("Tutoring", "Tutoring", "Home", "active", true)</li>   
+                                                     
                         </ul>
                     </nav>
                 </div>
             </div>
         </header>
         <div id="body">
-            @RenderSection("featured", required: false)
+            @*@RenderSection("featured", required: false)*@
             <section class="content-wrapper main-content clear-fix">
                 @RenderBody()
             </section>
@@ -37,7 +50,7 @@
         <footer>
             <div class="content-wrapper">
                 <div class="float-left">
-                    <p>&copy; @DateTime.Now.Year - My ASP.NET MVC Application</p>
+                    <p>&copy; @DateTime.Now.Year - created by Gwen, Barry and David</p>
                 </div>
             </div>
         </footer>

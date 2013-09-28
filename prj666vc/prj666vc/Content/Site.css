@@ -179,7 +179,7 @@ footer {
 
 /* menu
 ----------------------------------------------------------*/
-ul#menu {
+/*ul#menu {
     font-size: 1.3em;
     font-weight: 600;
     margin: 0 0 5px;
@@ -202,8 +202,94 @@ ul#menu {
         ul#menu li a:hover {
             color: #333;
             text-decoration: none;
-        }
+        }*/
 
+ul#menu {
+    display:block;
+    float:left;
+    text-align:center;
+    font-size:18px;
+    color:#ff0000;
+    text-decoration:none;
+    height:45px;
+    padding-left: 15px;
+    transition:font-size .2s ease-in;
+    font-family:arial,sans-serif;
+    margin:20px 0 0;
+}
+
+    ul#menu li {
+        display: inline;
+        list-style: none;
+        padding-left: 15px;
+    }
+
+        ul#menu li a {
+            background:none;
+            color: #3e5667;
+            text-decoration: none;
+                    }
+
+        ul#menu li a:hover {
+            font-size:22px;
+                color:#f33925;
+                transition:font-size .2s ease-out;
+        }
+    ul#menu li.selected a {
+        background-color: #034af3;
+        color: #e8eef4;
+}
+   
+       ul#menu li a.activeClass{font-size:28px;
+                    background: #7ac0da;
+                    color:#ff0000;
+                    text-decoration:none;
+        }
+        
+ul#sub_menu {
+    display:block;
+    float:left;
+    text-align:center;
+    font-size:16px;
+    color:#7ac0da;
+    text-decoration:none;
+    height:35px;
+    padding-left: 10px;
+    transition:font-size .2s ease-in;
+    font-family:arial,sans-serif;
+    margin:20px 0 0;
+}
+
+    ul#sub_menu li {
+        display: inline;
+        list-style: none;        
+        padding-left: 10px;
+    }
+    ul#sub_menu li a {
+            background:#c8c8c8;
+            color: #034af3;
+            text-decoration: none;
+        }
+        /*
+.menu_btn{display:block;
+    float:left;
+    text-align:center;
+                font-size:18px;
+                text-decoration-color:#ff0000;
+                text-decoration:none;
+                height:45px;
+                padding-left: 15px;
+                transition:font-size .2s ease-in;
+                font-family:arial,sans-serif;
+                margin:20px 0 0;}
+
+.menu_btn:hover{font-size:22px;
+                color:#f33925;
+                transition:font-size .2s ease-out;}
+
+.menu_btn.highlight{font-size:22px;
+                    color:#f33925;}
+            */
 
 /* page elements
 ----------------------------------------------------------*/
