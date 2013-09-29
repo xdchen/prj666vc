@@ -14,10 +14,12 @@
                 <div class="float-left">
                     <p class="site-title">@Html.ActionLink("GAB System V1.0", "Index", "Home")</p>
                 </div>
-                <div class="float-left">
+                <div class="float-right">
                     <section id="login">
                         @Html.Partial("_LoginPartial")
                     </section>
+                    </div>
+                <div class="float-left">
                     <section id="search">
                         <h3>Search for friends</h3>
                         <input id="Text1" type="text" /> <input id="Submit1" type="submit" value="submit" />
@@ -28,13 +30,13 @@
                         <ul id="menu">
                             
                             <li>@Html.MenuLink("Virtual Class", "Index", "VirtualClass", "active", true)</li>
-                            <li>@Html.MenuLink("Notes Sharing", "NotesSharing", "Home", "active", true)</li>
+                            <li>@Html.MenuLink("Notes Sharing", "Index", "NotesSharing", "active", true)</li>
                             
-                            <li>@Html.MenuLink("Messaging", "Messaging", "Home", "active", true)</li>
-                            <li>@Html.MenuLink("Timetable Sharing", "TimetableSharing", "Home", "active", true)</li>
-                            <li>@Html.MenuLink("Notifications", "Notifications", "Home", "active", true)</li>
-                            <li>@Html.MenuLink("Used Books", "UsedBooks", "Home", "active", true)</li>
-                            <li>@Html.MenuLink("Tutoring", "Tutoring", "Home", "active", true)</li>   
+                            <li>@Html.MenuLink("Messaging", "Messaging", "Account", "active", true)</li>
+                            <li>@Html.MenuLink("Timetable Sharing", "TimetableSharing", "Account", "active", true)</li>
+                            <li>@Html.MenuLink("Notifications", "Notifications", "Account", "active", true)</li>
+                            <li>@Html.MenuLink("Used Books", "UsedBooks", "Account", "active", true)</li>
+                            <li>@Html.MenuLink("Tutoring", "Tutoring", "Account", "active", true)</li>   
                                                      
                         </ul>
                     </nav>

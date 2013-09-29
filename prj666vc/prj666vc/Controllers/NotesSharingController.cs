@@ -6,10 +6,10 @@ using System.Web.Mvc;
 
 namespace prj666vc.Controllers
 {
-    public class VirtualClassController : Controller
+    public class NotesSharingController : Controller
     {
         //
-        // GET: /VirtualClass/
+        // GET: /NotesSharing/
 
         public ActionResult Index()
         {
@@ -17,25 +17,15 @@ namespace prj666vc.Controllers
         }
 
         //
-        // GET: /VirtualClass/Details/5
+        // GET: /NotesSharing/Details/5
 
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        public ActionResult CourseList()
-        {
-            return View();
-        }
-
-        public ActionResult SearchCourse()
-        {
-            return View();
-        }
-
         //
-        // GET: /VirtualClass/Create
+        // GET: /NotesSharing/Create
 
         public ActionResult Create()
         {
@@ -43,7 +33,7 @@ namespace prj666vc.Controllers
         }
 
         //
-        // POST: /VirtualClass/Create
+        // POST: /NotesSharing/Create
 
         [HttpPost]
         public ActionResult Create(FormCollection collection)
@@ -61,7 +51,7 @@ namespace prj666vc.Controllers
         }
 
         //
-        // GET: /VirtualClass/Edit/5
+        // GET: /NotesSharing/Edit/5
 
         public ActionResult Edit(int id)
         {
@@ -69,7 +59,7 @@ namespace prj666vc.Controllers
         }
 
         //
-        // POST: /VirtualClass/Edit/5
+        // POST: /NotesSharing/Edit/5
 
         [HttpPost]
         public ActionResult Edit(int id, FormCollection collection)
@@ -87,7 +77,7 @@ namespace prj666vc.Controllers
         }
 
         //
-        // GET: /VirtualClass/Delete/5
+        // GET: /NotesSharing/Delete/5
 
         public ActionResult Delete(int id)
         {
@@ -95,7 +85,7 @@ namespace prj666vc.Controllers
         }
 
         //
-        // POST: /VirtualClass/Delete/5
+        // POST: /NotesSharing/Delete/5
 
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)

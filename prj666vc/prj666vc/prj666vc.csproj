@@ -184,6 +184,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\NotesSharingController.cs" />
     <Compile Include="Controllers\VirtualClassController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
@@ -305,7 +306,9 @@
     <Content Include="Views\Home\VirtualClass.cshtml" />
     <Content Include="Views\Home\NotesSharing.cshtml" />
     <Content Include="Views\VirtualClass\Index.cshtml" />
-    <Content Include="Views\VirtualClass\Create.cshtml" />
+    <Content Include="Views\VirtualClass\CourseList.cshtml" />
+    <Content Include="Views\VirtualClass\SearchCourse.cshtml" />
+    <Content Include="Views\NotesSharing\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

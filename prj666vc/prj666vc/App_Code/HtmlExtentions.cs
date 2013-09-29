@@ -14,7 +14,7 @@ namespace prj666vc.App_Code
             string currentAction = htmlHelper.ViewContext.RouteData.GetRequiredString("action");
             string currentController = htmlHelper.ViewContext.RouteData.GetRequiredString("controller");
 
-            if (string.Compare(controllerName, currentController, StringComparison.OrdinalIgnoreCase) == 0 && ((!checkAction) || string.Compare(actionName, currentAction, StringComparison.OrdinalIgnoreCase) == 0))
+            if (string.Compare(controllerName, currentController, StringComparison.OrdinalIgnoreCase) == 0 && ((!checkAction) || string.Compare(actionName, currentAction, StringComparison.OrdinalIgnoreCase) == 0) || string.Compare(controllerName, currentController, StringComparison.OrdinalIgnoreCase) == 0)
             {
                 return htmlHelper.ActionLink(linkText, actionName, controllerName, null, new { @class = "activeClass" });
             }
@@ -27,5 +27,6 @@ namespace prj666vc.App_Code
         {
             return MenuLink(htmlHelper, linkText, actionName, controllerName, activeClass, true);
         }
+
     }
 }
