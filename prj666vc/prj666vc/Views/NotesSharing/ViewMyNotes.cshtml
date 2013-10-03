@@ -1,0 +1,86 @@
+﻿@model IEnumerable<prj666vc.ViewModels.NoteBase>
+
+@{
+    ViewBag.Title = "ViewMyNotes";
+}
+
+
+<div>
+<ul id ="sub_menu">                            
+<li>@Html.subMenuLink("Share a Note", "ShareNote", "NotesSharing", "active", true)</li>
+<li>@Html.subMenuLink("View My shared Notes", "ViewMyNotes", "NotesSharing", "active", true)</li>
+</ul>
+</div>
+<p>
+    @Html.ActionLink("Create New", "ShareNote")
+</p>
+<table class ="tab_list">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CourseCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContentType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PostOwner)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FileName)
+        </th>
+        <th>
+            <p>Action</p>
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CourseCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContentType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PostOwner)
+        </td>
+        <td>
+          @*  @Html.DisplayFor(modelItem => item.FileName)*@
+          @{
+              if(item.FileName != null)
+              {
+                  @Html.ActionLink(item.FileName, "NoteDownload", new { id=item.Id }, null)
+              }
+          }          
+        </td>
+        <td id ="action">
+            @Html.ActionLink("Edit", "NoteEdit", new { id=item.Id })            
+            |
+            @Html.ActionLink("Delete", "NoteDelete", new { id=item.Id })
+            |
+            @if(item.Status)
+            {
+            @Html.ActionLink("Share", "NoteShareStatus", new { id=item.Id })
+            }
+            else
+            {
+            @Html.ActionLink("unShare", "NoteShareStatus", new { id=item.Id })
+            }
+        </td>
+    </tr>
+}
+
+</table>

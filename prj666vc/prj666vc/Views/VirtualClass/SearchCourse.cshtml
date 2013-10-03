@@ -2,13 +2,13 @@
     ViewBag.Title = "SearchCourse";
 }
 
-<div class="float-left">
+<div >
     <section>
                     <nav>
                         <ul id ="sub_menu">
                             
-                            <li>@Html.ActionLink("Show List of Classes enrolled", "CourseList", "VirtualClass")</li>
-                            <li>@Html.ActionLink("Search for Classes", "SearchCourse", "VirtualClass")</li>
+                            <li>@Html.subMenuLink("Show List of Classes enrolled", "CourseList", "VirtualClass","active", true)</li>
+                            <li>@Html.subMenuLink("Search for Classes", "SearchCourse", "VirtualClass","active", true)</li>
                         </ul>
                     </nav>
 

@@ -2,4 +2,13 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Notes Sharing</h2>
+    <div>
+        <section>
+                    <nav>
+                        <ul id ="sub_menu">                            
+                            <li>@Html.subMenuLink("Share a Note", "ShareNote", "NotesSharing", "active", true)</li>
+                            <li>@Html.subMenuLink("View My shared Notes", "ViewMyNotes", "NotesSharing", "active", true)</li>
+                        </ul>
+                    </nav>
+        </section>
+    </div>

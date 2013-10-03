@@ -28,5 +28,19 @@ namespace prj666vc.App_Code
             return MenuLink(htmlHelper, linkText, actionName, controllerName, activeClass, true);
         }
 
+        public static MvcHtmlString subMenuLink(this HtmlHelper htmlHelper, string linkText, string actionName, string controllerName, string activeClass, bool checkAction)
+        {
+            string currentAction = htmlHelper.ViewContext.RouteData.GetRequiredString("action");
+            string currentController = htmlHelper.ViewContext.RouteData.GetRequiredString("controller");
+
+            if (string.Compare(controllerName, currentController, StringComparison.OrdinalIgnoreCase) == 0 && (  string.Compare(actionName, currentAction, StringComparison.OrdinalIgnoreCase) == 0) )
+            {
+                return htmlHelper.ActionLink(linkText, actionName, controllerName, null, new { @class = "activeClass2" });
+            }
+
+            return htmlHelper.ActionLink(linkText, actionName, controllerName);
+
+        }
+
     }
 }

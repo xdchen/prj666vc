@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AutoMapper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -23,6 +24,18 @@ namespace prj666vc
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             AuthConfig.RegisterAuth();
+
+            // AutoMapper definitions
+
+            // Program - FROM app domain model classes
+            Mapper.CreateMap<Models.Note, ViewModels.NotePublic>();
+            Mapper.CreateMap<Models.Note, ViewModels.NoteBase>();
+            Mapper.CreateMap<Models.Note, ViewModels.NoteFull>();
+
+            // Program - TO app domain model classes
+            Mapper.CreateMap<ViewModels.NotePublic, Models.Note>();
+            Mapper.CreateMap<ViewModels.NoteBase, Models.Note>();
+            Mapper.CreateMap<ViewModels.NoteFull, Models.Note>();
         }
     }
 }
